@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # 3rd party
+    "rest_framework",
+    "djoser",
     # Local
     "accounts.apps.AccountsConfig",
 ]
@@ -137,3 +140,14 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # USER
 AUTH_USER_MODEL = "accounts.User"
+
+# JWT / REST FRAMEWORK
+SIMPLE_JWT = {
+    "AUTH_HEADER_TYPES": ("JWT",),
+}
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
+}

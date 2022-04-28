@@ -9,6 +9,9 @@ djangorestframework = "~=3.13.0"
 django-environ = "*"
 psycopg2 = "*"
 psycopg2-binary = "*"
+djoser = "*"
+djangorestframework-simplejwt = "*"
+social-auth-app-django = "*"
 
 [dev-packages]
 
